@@ -1,0 +1,82 @@
+@use "sass:map";
+
+// Bootstrap grid, CSS Grid, and flex/display/spacing utilities only.
+// Bootstrap 5 is still written with @import, so it is loaded that way here;
+// the rest of the project uses @use.
+
+// ---- Configuration -------------------------------------------------------
+$enable-cssgrid: true;
+$include-column-box-sizing: true;
+
+// ---- Bootstrap internals (no CSS output) ---------------------------------
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// Extra gutter sizes used by the theme (g-4-s, g-6 … g-8)
+// stylelint-disable-next-line scss/dollar-variable-default
+$gutters: map.merge(
+  $spacers,
+  (
+    "4-s": 1.25rem,
+    6: 6rem,
+    7: 7rem,
+    8: 8rem,
+  )
+);
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins/breakpoints";
+@import "bootstrap/scss/mixins/container";
+@import "bootstrap/scss/mixins/grid";
+@import "bootstrap/scss/mixins/utilities";
+@import "bootstrap/scss/vendor/rfs";
+
+// ---- Grid ----------------------------------------------------------------
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+// ---- Utilities: display, flexbox, gap, spacing ---------------------------
+@import "bootstrap/scss/utilities";
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-get-multiple(
+  $utilities,
+  (
+    "display",
+    "order",
+    "flex",
+    "flex-direction",
+    "flex-grow",
+    "flex-shrink",
+    "flex-wrap",
+    "justify-content",
+    "align-items",
+    "align-content",
+    "align-self",
+    "gap",
+    "row-gap",
+    "column-gap",
+    "margin",
+    "margin-x",
+    "margin-y",
+    "margin-top",
+    "margin-end",
+    "margin-bottom",
+    "margin-start",
+    "negative-margin",
+    "negative-margin-x",
+    "negative-margin-y",
+    "negative-margin-top",
+    "negative-margin-end",
+    "negative-margin-bottom",
+    "negative-margin-start",
+    "padding",
+    "padding-x",
+    "padding-y",
+    "padding-top",
+    "padding-end",
+    "padding-bottom",
+    "padding-start",
+  )
+);
+@import "bootstrap/scss/utilities/api";

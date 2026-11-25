@@ -1,0 +1,117 @@
+@use "../../abstracts" as *;
+
+.section-giftcard {
+    .breadcrumbs, .gui-locations-title {
+        display: none;
+    }
+    input[type=radio], input[type=checkbox] {
+        display: block;
+    }
+    .design-select {
+        cursor: pointer;
+    }
+    .gui-button-large, .giftcard-submit-button {
+        max-width: 100% !important;
+        line-height: 20px !important;
+        padding: 14px 30px !important;
+        color: $buttonTextColor !important;
+        border: 1px solid $buttonBackgroundColor !important;
+        background: $buttonBackgroundColor !important;
+        transition: 0.3s !important;
+        display: inline-block !important;
+        text-align: center !important;
+        position: relative !important;
+        cursor: pointer !important;
+        font-size: 1em !important;
+        font-family: $mainFont !important;
+        font-weight: 500 !important;
+        border-radius: var(--general-border-radius, 5px) !important;
+    
+        &:hover {
+            color: $buttonHoverTextColor !important;
+            background: $buttonHoverBackgroundColor !important;
+            border: 1px solid $buttonHoverBackgroundColor !important;
+        }
+    }
+    select, textarea, input[type=text], input[type=number], input[type=email], input[type=password], input[type=tel] {
+        padding: 5px 18px !important;
+        border: none !important;
+        border-radius: 10px !important;
+        font-size: $fontSize16 !important;
+        max-width: 100% !important;
+        height: 50px !important; 
+        border: 2px solid transparent !important;
+        &:hover {
+            border-color: $buttonBackgroundColor !important;
+        }
+        &:active,
+        &:focus {
+            border: 2px solid $buttonBackgroundColor !important;
+            background: $white !important;
+        }
+    }
+    #giftcard-modal-wrapper {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        #giftcard-modal-close.close {
+            background: transparent !important;
+            align-items: center;
+            border: none !important;
+        }
+        #giftcard-check-form {
+            .giftcard-check-action {
+                max-width: 100% !important;
+                line-height: 20px !important;
+                padding: 14px 30px !important;
+                color: $buttonTextColor !important;
+                border: 1px solid $buttonBackgroundColor !important;
+                background: $buttonBackgroundColor !important;
+                transition: 0.3s !important;
+                display: inline-block !important;
+                text-align: center !important;
+                position: relative !important;
+                cursor: pointer !important;
+                font-size: 1em !important;
+                font-family: $mainFont !important;
+                font-weight: 500 !important;
+                border-radius: var(--general-border-radius, 5px) !important;
+                height: auto !important;
+                width: 100% !important;
+                &:hover {
+                    color: $buttonHoverTextColor !important;
+                    background: $buttonHoverBackgroundColor !important;
+                    border: 1px solid $buttonHoverBackgroundColor !important;
+                }
+            }
+        } 
+        #giftcard-modal-footer {
+            button {
+                max-width: 100% !important;
+                line-height: 20px !important;
+                padding: 14px 30px !important;
+                border: 1px solid $buttonBackgroundColor !important;
+                transition: 0.3s !important;
+                display: flex !important;
+                text-align: center !important;
+                position: relative !important;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer !important;
+                font-size: 1em !important;
+                font-family: $mainFont !important;
+                font-weight: 500 !important;
+                border-radius: var(--general-border-radius, 5px) !important;
+                color: $buttonSecondaryTextColor !important;
+                background: transparent !important;
+                border-color: $buttonSecondaryBorderColor !important;
+        
+                &:hover {
+                    color: $buttonSecondaryHoverTextColor !important;
+                    background: transparent !important;
+                    border-color: $buttonSecondaryBorderHoverColor !important;
+                }
+            }
+        }
+    } 
+}

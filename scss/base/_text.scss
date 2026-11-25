@@ -1,0 +1,147 @@
+@use "../abstracts" as *;
+
+.maxtext {
+    max-width: 750px;
+    color: $bodyTextColor;
+
+    &.content-wrapper {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 10px;
+        th,
+        td {
+            text-align: left;
+            padding: 10px;
+        }
+        tr:nth-child(odd) {
+            background-color: $white;
+            td {
+                border-radius: 5px;
+                background-color: $white;
+            }
+        }
+    }
+
+    &.maxtext-big {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    &.smaller {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    p {
+        margin: 0 0 30px;
+
+        & > .cta {
+            margin-top: 30px;
+        }
+    }
+
+    figure {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0 0 30px;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+
+            &:before {
+                content: "";
+                top: 6px;
+                width: 7px;
+                height: 7px;
+                border-radius: 100%;
+                background: $linkColor;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    & > *:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+h1 {
+    font-family: $titleFont;
+    margin: 0 0 5px;
+    color: $bodyTitleColor;
+    font-weight: 700;
+    display: block;
+    font-size: 3.157em;
+    line-height: 1;
+}
+h2 {
+    font-size: 2.369em;
+    font-family: $titleFont;
+    margin: 0 0 5px;
+    color: $bodyTitleColor;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+h3 {
+    font-size: 1.777em;
+    font-family: $titleFont;
+    margin: 0 0 10px;
+    color: $bodyTitleColor;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+h4 {
+    font-size: 1.333em;
+    font-family: $titleFont;
+    margin: 0 0 10px;
+    color: $bodyTitleColor;
+    font-weight: 700;
+    display: block;
+}
+h5 {
+    font-size: 1em;
+    font-family: $titleFont;
+    color: $bodyTitleColor;
+    margin: 0 0 5px;
+    line-height: 1;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+}
+h6 {
+    font-size: 1em;
+    font-family: $titleFont;
+    color: $bodyTitleColor;
+    margin: 0 0 5px;
+    line-height: 1;
+    font-weight: 700;
+    width: 100%;
+    display: block;
+}
+p {
+    font-size: 1em;
+    display: block;
+    margin: 0;
+    line-height: 1.5;
+}

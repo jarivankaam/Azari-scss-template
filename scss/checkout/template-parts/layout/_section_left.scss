@@ -1,0 +1,13 @@
+@use "../../../abstracts" as *;
+
+.left-content {
+  background: $wbgray;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .left-content {
+    padding: 30px 0;
+  }
+}

@@ -1,0 +1,35 @@
+// Theme additions on top of the Bootstrap grid
+// (carried over from the old rb/lib/_grid.scss)
+
+.flex {
+    display: flex;
+}
+
+// 5-column layout at lg and up
+@media (min-width: 992px) {
+    .col-lg-20,
+    .col-lg-25 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+.pt-100 {
+    padding-top: 100px !important;
+}
+
+.pt-150 {
+    padding-top: 150px !important;
+}
+
+.text-start {
+    text-align: left !important;
+}
+
+.text-end {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}

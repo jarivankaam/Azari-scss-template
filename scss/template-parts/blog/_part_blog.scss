@@ -1,0 +1,51 @@
+@use "../../abstracts" as *;
+
+.part-blog-wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    box-shadow: none;
+
+    &:hover {
+        .image-wrapper {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .image-wrapper {
+        max-height: 250px;
+        flex: 0 1 auto;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            object-position: center;
+            max-height: 250px;
+            transition: 0.3s;
+        }
+    }
+
+    .content-wrapper {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column;
+        padding: 20px;
+        background-color: $white;
+
+        h5 {
+            padding-bottom: 30px;
+        }
+
+        .cta-wrapper {
+            margin-top: auto;
+        }
+    }
+
+    &.part-blog-wb {
+        box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+    }
+}

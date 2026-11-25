@@ -1,0 +1,18 @@
+@use "../../abstracts" as *;
+
+.part-brand-wrapper {
+    background: $white;
+    .image-wrapper {
+        padding: 10px 20px;
+        height: 100%;
+        display: flex;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &.part-brand-wb {
+        border: solid 1px $gray;
+    }
+}

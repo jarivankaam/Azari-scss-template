@@ -1,0 +1,62 @@
+@use "../../abstracts" as *;
+
+.section-sitemap {
+    .sitemap-title {
+        color: $linkColor;
+        font-weight: bolder;
+        padding: 10px;
+    }
+
+    .child-items {
+        transition: 0.3s ease height;
+    }
+
+    .no-heighter {
+        height: auto !important;
+    }
+
+    .main-sitemap {
+        background-color: $bottomBarBackgroundColor;
+        border-radius: var(--general-border-radius, 5px);
+        padding: 20px;
+        a {
+            h3 {
+                margin: 0;
+            }
+        }
+
+        &.maxtext {
+            max-width: 100%;
+        }
+
+        .title {
+            h3 {
+                color: $bottomBarTextColor;
+            }
+
+            color: $bottomBarTextColor;
+        }
+
+        a {
+            &:hover {
+                > * {
+                    color: $linkHoverColor;
+                }
+            }
+        }
+    }
+}
+
+.inner-item {
+    background-color: $contentCardBackgroundColor;
+    padding: 10px;
+    border-radius: var(--general-border-radius, 5px);
+}
+
+a {
+    &:hover {
+        > * {
+            color: $linkHoverColor;
+        }
+    }
+}

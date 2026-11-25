@@ -1,0 +1,98 @@
+@use "../../abstracts" as *;
+
+.review-card-wrapper {
+    background-color: $white;
+    padding: 10px 20px;
+
+    .star-wrapper {
+        margin-bottom: 5px;
+
+        .icon-star {
+            &:before {
+                font-size: 14px;
+            }
+        }
+    }
+    .review-author {
+        margin-top: 10px;
+
+        p {
+            font-weight: 500;
+
+            &:before {
+                content: "-";
+                padding-right: 5px;
+            }
+        }
+    }
+
+    &.review-card-home-wrapper {
+        padding: 30px;
+        border-radius: var(--general-border-radius, 10px);
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+
+        .star-wrapper {
+            margin-bottom: 10px;
+            .icon-star {
+                &:before {
+                    color: $gray2;
+                    margin: 0 2px 0 0;
+                    font-size: 16px;
+                }
+
+                &.rated {
+                    &:before {
+                        color: $buttonBackgroundColor;
+                    }
+                    &.half {
+                        &:before {
+                            color: transparent;
+                            background: linear-gradient(
+                                to right,
+                                $buttonBackgroundColor 0%,
+                                $buttonBackgroundColor 50%,
+                                $gray2 50%,
+                                $gray2 100%
+                            );
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+                &:nth-last-child(1) {
+                    &:before {
+                        margin-right: 0 !important;
+                    }
+                }
+            }
+        }
+
+        .review-content {
+            margin-bottom: 20px;
+        }
+
+        .review-author {
+            margin-top: auto;
+
+            p {
+                padding-left: 20px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    height: 1px;
+                    background: $bodyTextColor;
+                    width: 10px;
+                    position: absolute;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

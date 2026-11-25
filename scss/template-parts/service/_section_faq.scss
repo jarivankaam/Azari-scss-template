@@ -1,0 +1,44 @@
+@use "../../abstracts" as *;
+
+.single-faq {
+    .faq-question {
+        cursor: pointer;
+        background: $white;
+        padding: 20px;
+
+        h5 {
+            margin-bottom: 0;
+            padding-right: 40px;
+
+            &:after {
+                content: "\2b";
+                font-family: $fontawesome;
+                right: 20px;
+                color: $buttonBackgroundColor;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &.active {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            h5 {
+                &:after {
+                    content: "\f068";
+                    font-family: $fontawesome;
+                }
+            }
+        }
+    }
+
+    .faq-answer {
+        display: none;
+        background: $white;
+        padding: 0px 20px 20px;
+        border-bottom-left-radius: var(--general-border-radius, 10px);
+        border-bottom-right-radius: var(--general-border-radius, 10px);
+    }
+}

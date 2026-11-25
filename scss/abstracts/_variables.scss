@@ -1,0 +1,104 @@
+/* Fonts var */
+$fontawesome: "Font Awesome 6 Pro";
+$fontawesomeBrands: "Font Awesome 6 Brands";
+$fontawesomeDuotone: "Font Awesome 6 Duotone";
+$mainFont: "Poppins", sans-serif;
+$titleFont: "Poppins", sans-serif;
+$transition: 0.3s;
+$transitionEase: 0.3s ease;
+
+/* extra colors */
+$black: #000;
+$white: #fff;
+$gray: #e5e6e7;
+$wbgray: #ebebeb;
+$wogray: #f8f8f8;
+$gray2: #bdbdbd;
+$gray3: #d8d8d8;
+$gray4: #afafbb;
+$green: #66cf4d;
+$red: #f35731;
+$red2: #ffe8e8;
+$blue: #0c1315;
+
+$backgroundImage: url("https://cdn.webshopapp.com/shops/342728/files/412230217/pattern-overlay.png");
+
+/* Font sizes */
+$fontSize89: 5.61em;
+$fontSize67: 4.209em;
+$fontSize50: 3.157em;
+$fontSize48: 3em;
+$fontSize37: 2.369em;
+$fontSize32: 2em;
+$fontSize28: 1.777em;
+$fontSize24: 1.5em;
+$fontSize21: 1.333em;
+$fontSize20: 1.250em;
+$fontSize18: 1.125em;
+$fontSize16: 1em;
+$fontSize15: 0.938em;
+$fontSize14: 0.85em;
+$fontSize12: 0.75em;
+$fontSize10: 0.625em;
+
+/* Body */
+$bodyBackgroundColor: var(--body-background-color);
+$bodyTitleColor: var(--body-title-color);
+$bodyTextColor: var(--body-text-color);
+/* Message bar */
+$messageBarBackgroundColor: var(--message-bar-background-color);
+$messageBarTextColor: var(--message-bar-text-color);
+/* Hero */
+$heroBackgroundImage: var(--hero-background-image);
+$heroBackgroundColor: var(--hero-background-color);
+$heroTextColor: var(--hero-text-color);
+$heroOverlayColor: var(--hero-overlay-color);
+$heroOverlayOpacity: var(--hero-overlay-opacity);
+
+/* Bottom bar */
+$bottomBarBackgroundColor: var(--bottom-bar-background-color);
+$bottomBarTextColor: var(--bottom-bar-text-color);
+/* Footer */
+$footerBackgroundColor: var(--footer-background-color);
+$footerTextColor: var(--footer-text-color);
+/* Button */
+$buttonBackgroundColor: var(--button-background-color);
+$buttonHoverBackgroundColor: var(--button-hover-background-color);
+$buttonTextColor: var(--button-text-color);
+$buttonHoverTextColor: var(--button-hover-text-color);
+/* Button Seconday */
+$buttonSecondaryBackgroundColor: var(--button-secondary-background-color);
+$buttonSecondaryHoverBackgroundColor: var(--button-secondary-hover-background-color);
+$buttonSecondaryTextColor: var(--button-secondary-text-color);
+$buttonSecondaryHoverTextColor: var(--button-secondary-hover-text-color);
+$buttonSecondaryBorderColor: var(--button-secondary-border-color);
+$buttonSecondaryBorderHoverColor: var(--button-secondary-border-hover-color);
+/* Link */
+$linkColor: var(--link-color);
+$linkHoverColor: var(--link-hover-color);
+/* Breadcrumbs */
+$breadcrumbBackgroundColor: var(--breadcrumb-background-color);
+$breadcrumbTextColor: var(--breadcrumb-text-color);
+/* Filter */
+$filterBackgroundColor: var(--filter-background-color);
+$filterIconsColor: var(--filter-icons-color);
+$checkboxColor: var(--checkbox-color);
+$radioButtonColor: var(--radio-button-color);
+$filterTextColor: var(--filter-text-color);
+/* Product labels */
+$productLabelBackgroundColor: var(--product_label_background_color);
+$productLabelTextColor: var(--product_label_text_color);
+/* Product card */
+$productWishlistIconBackgroundColor: var(--product_wishlist_icon_background_color);
+$productPriceSize: var(--product_price_size);
+$productTitleSize: var(--product_title_size);
+
+
+
+/* Total reviews color */
+$totalReviewsBackgroundColor: var(--total_review_background_color);
+
+$generalBorderRadius: var(--general-border-radius);
+
+/* contentCardBackgroundColor  */
+$contentCardBackgroundColor: var(--content_card_background_color);

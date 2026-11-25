@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+@media screen and (min-width: 992px) {
+    .desktop-hide {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1198px) {
+}
+
+@media screen and (max-width: 991px) {
+    .mobile-hide {
+        display: none !important;
+    }
+
+    .mobile-reverse {
+        -ms-flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        flex-direction: column-reverse;
+    }
+
+    .section-heading {
+        .title {
+            h2 {
+                font-size: $fontSize28;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .cta-wrapper {
+        a {
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .heading-content {
+        text-align: start;
+        margin-bottom: 20px;
+    }
+
+    .cta-wrapper {
+        flex-wrap: wrap;
+
+        a {
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
+        .cta {
+            width: 100%;
+            // margin: 5px;
+        }
+    }
+
+    .swiper-overflow {
+        overflow: inherit;
+    }
+
+    .section,
+    section {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 550px) {
+}

@@ -1,0 +1,141 @@
+@use "../../abstracts" as *;
+
+.pagination {
+    .page-nmr {
+      a {
+        margin: 0 0 0 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 32px;
+        text-align: center;
+        display: block;
+        color: $bodyTextColor;
+  
+        &:not(.icon) {
+          border-radius: 50%;
+          background: transparent;
+          color: $black;
+          font-weight: 600;
+        }
+        &:hover {
+          background: $gray;
+        }
+      }
+      &.active {
+        a {
+          background: $buttonBackgroundColor;
+          color: $buttonTextColor;
+        }
+      }
+      &.disabled {
+        display: none;
+      }
+    }
+  }
+
+  .collection-head, .section-heading {
+        h1 {
+            font-size: $fontSize28;
+            margin-right: 10px;
+        }
+  }
+
+#formProductsFilters {
+    .sort-select-box {
+        .sort-select-wrapper {
+            height: 34px;
+            border: 1px solid #E5E6E7;
+            border-radius: var(--general-border-radius, 5px);
+            padding: 0 10px 0 10px;
+            pointer-events: none;
+        }
+        width: max-content;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 14px;
+        .sort-title {
+            width: -webkit-fill-available;
+            b {
+                margin-left: 5px;
+            }
+        }
+        .icon {
+            &:before {
+                font-size: 14px;
+                color: $linkColor;
+                pointer-events: none;
+                margin-left: 10px;
+                margin-right: 0;
+            }
+        }
+    
+        &:hover {
+        border-color: $linkHoverColor;
+        }
+    
+
+        span,
+        &:after {
+        pointer-events: none;
+        }
+    
+        select {
+        background: transparent;
+        border: 0;
+        font-weight: 600;
+        margin-left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        cursor: pointer;
+        option {
+            color: $bodyTextColor;
+        }
+        &:active, &:focus {
+            border: 0 !important;
+        }
+        }
+    }
+    .filter-btns {
+        a {
+            width: 100%;
+            background-color: $white;
+            border-color: $white;
+            color: $bodyTextColor;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            padding: 14px 10px;
+            &:before {
+                color: $linkColor;
+            }
+            &:hover {
+                background: $white;
+                border-color: $white;
+            }
+            &.colored-background {
+                background-color: $gray;
+                border-color: $gray;
+                box-shadow: none;
+                &:hover {
+                    background: $gray;
+                    border-color: $gray;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px){
+    #formProductsFilters {
+        .sort-select-box {
+            margin-top: 10px !important;
+            width: 100% !important;
+            .sort-select-wrapper {
+                height: 50px !important;
+            }
+        }
+        .sort-select-box:not(.show-it) {
+            display: none !important;
+        }
+    }
+}
+  

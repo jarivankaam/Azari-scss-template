@@ -1,0 +1,76 @@
+@use "../../../abstracts" as *;
+
+.shipping-method {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  .radio {
+    label {
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 14px;
+
+      &.free-shipping {
+        color: $green;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.shipment-options {
+  position: relative;
+  max-width: 350px;
+  padding: 0 0 0 32px;
+
+  &.empty-options {
+    display: none;
+
+    &:after {
+      content: "";
+    }
+  }
+
+  &:after {
+    content: "\f078";
+    font-family: $fontawesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  select {
+    color: #070707;
+    font-weight: 500;
+    font-size: 14px;
+    height: 40px;
+    padding: 5px 45px 5px 18px;
+  }
+}
+
+.no-shipping-text {
+  background: #fbfbfb;
+  border: solid #14c2cc;
+  padding: 20px;
+  border-radius: 5px;
+
+  &:before {
+    content: "\f05a";
+    font-family: $fontawesome;
+    margin-right: 5px;
+    color: #14c2cc;
+    font-weight: 800;
+  }
+}

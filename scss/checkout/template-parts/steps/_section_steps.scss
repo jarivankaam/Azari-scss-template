@@ -1,0 +1,358 @@
+@use "../../../abstracts" as *;
+
+.form-steps {
+  display: block;
+  width: calc(100% - -15%);
+  position: relative;
+  margin: 40px 0;
+  left: -7%;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &__item {
+    padding: 0;
+    position: relative;
+    display: block;
+    float: left;
+    width: 16.5%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__item-content {
+    display: inline-block;
+  }
+  // Step Icon
+  &__item-icon {
+    background: #eceff1;
+    color: #8191ab;
+    display: block;
+    border-radius: 100%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 10px auto;
+    position: relative;
+    font-size: 13px;
+    font-weight: 700;
+    z-index: 2;
+  }
+  // Step text
+  &__item-text {
+    font-size: 13px;
+    color: #8191ab;
+    font-weight: 500;
+  }
+
+  &__item-line {
+    display: inline-block;
+    height: 3px;
+    width: 75%;
+    background: #cfd8dc;
+    float: left;
+    position: absolute;
+    left: -38%;
+    top: 18px;
+    z-index: 1;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  // Active Step
+  &__item--active {
+    .form-steps__item-icon {
+      background: $buttonBackgroundColor;
+      color: #ffffff;
+    }
+
+    .form-steps__item-text {
+      color: #4f5e77;
+    }
+
+    .form-steps__item-line {
+      background: $buttonBackgroundColor;
+    }
+  }
+  // Active Step
+  &__item--completed {
+    .form-steps__item-text {
+      color: #4f5e77;
+    }
+
+    .form-steps__item-icon {
+      background: $buttonBackgroundColor;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDkuMTIgNyI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTkuMTIgMS4wNkw4LjA2IDAgMy4xOCA0Ljg4IDEuMDYgMi43NiAwIDMuODIgMy4xOCA3bDUuOTQtNS45NHoiLz48L3N2Zz4=);
+      color: transparent;
+      background-size: 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .form-steps__item-line {
+      background: $buttonBackgroundColor;
+    }
+  }
+}
+
+.step-1-content,
+.step-2-content,
+.step-3-content,
+.step-4-content,
+.step-5-content,
+.step-6-content {
+  display: none;
+}
+
+.step-1-content {
+  .forgot-password-link {
+    cursor: pointer;
+    color: $buttonBackgroundColor;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  a.cta.full-width {
+    background-color: white;
+    color: black;
+    border: 0;
+  }
+}
+.step-2-content {
+  .error-msg {
+    display: none;
+  }
+  .left-content {
+    .gui-block-company-fields {
+      &.hidden {
+        display: none;
+      }
+    }
+    .address-formatted,
+    .error-msg-address,
+    .address-formatted-2,
+    .error-msg-address-2,
+    .extra-address,
+    .extra-address-2,
+    .address-2-details {
+      display: none;
+    }
+
+    .address-formatted,
+    .address-formatted-2 {
+      background: $green;
+      padding: 10px;
+      border: 1px solid $green;
+      border-radius: 5px;
+
+      strong {
+        color: $white;
+      }
+
+      span {
+        color: $white;
+      }
+
+      a {
+        color: $white;
+        font-weight: strong;
+      }
+    }
+    .submit-details-wrapper {
+      justify-content: flex-end;
+    }
+
+    .gui-input-phone-number-code-wrapper {
+      padding-left: 18px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50px;
+      }
+
+      .js-gui-input-phone-number-code-placeholder {
+        padding-left: 10px;
+      }
+
+      select.js-gui-form-details-phone-number-code.gui-form-details-phone-number-code {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+      }
+    }
+    input#gui-form-details-phone-number {
+      padding-left: 110px;
+    }
+  }
+}
+.step-4-content {
+  #gui-checkout-payment-methods {
+    .method {
+      background: $white;
+      padding: 20px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      .payment-label {
+        display: flex;
+        flex-flow: column;
+        margin: 0 0 0 10px;
+        justify-content: space-around;
+        &:before {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:after {
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+        }
+      }
+      .method-left {
+        align-items: center;
+        .payment-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          margin-left: 10px;
+          span {
+            line-height: normal;
+          }
+        }
+        img {
+          width: auto;
+          height: 30px;
+        }
+
+        .price {
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}
+.step-5-content {
+  .left-content {
+    .icon {
+      &:before {
+        color: $buttonBackgroundColor;
+      }
+    }
+
+    #shipment-details-overview,
+    #billing-details-overview {
+      div {
+        line-height: 22px;
+        font-size: 14px;
+      }
+    }
+    #payment-details-overview {
+      background: $white;
+      padding: 20px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      span {
+        font-size: 14px;
+      }
+      .payment-title {
+        font-weight: 600;
+      }
+      .payment-label {
+        display: flex;
+        flex-flow: column;
+        margin: 0 0 0 10px;
+        justify-content: space-around;
+        &:before {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:after {
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+        }
+      }
+      .method-right {
+        align-self: center;
+        span {
+          font-weight: 600;
+        }
+      }
+      .method-left {
+        align-items: center;
+        .payment-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          margin-left: 10px;
+          span {
+            line-height: normal;
+          }
+        }
+        img {
+          width: auto;
+          height: 30px;
+        }
+
+        .price {
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+	#checkout-top-steps {
+  	margin: 0;
+  }
+  
+  #checkout-content {
+  	background: #ebebeb;
+  }
+  
+  .form-steps__item-icon {
+    width: 20px;
+    height: 20px;  
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .form-steps__item--completed .form-steps__item-icon {
+    width: 20px;
+    height: 20px;  
+    line-height: 20px;
+  }
+  
+  .form-steps__item-line {
+  	width: 70%;
+    left: -35%;
+    top: 8px;
+  }
+  
+  .form-steps__item-text {
+    font-size: 10px;
+  }
+  
+  .form-steps {
+    margin: 30px 0 20px;
+  }
+  
+  a.inline-cta, input[type="submit"], button, .gui-button-large, .gui-button-small, .cta {
+  	display: block;
+    width: 100%;
+  }
+}

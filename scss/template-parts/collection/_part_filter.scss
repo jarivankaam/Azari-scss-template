@@ -1,0 +1,218 @@
+@use "../../abstracts" as *;
+
+.sidebar-column {
+    background-color: $filterBackgroundColor;
+    padding: 30px;
+    border-radius: var(--general-border-radius, 10px);
+    color: $filterTextColor;
+
+    &.hide-background {
+        @media screen and (min-width: 991px) {
+            padding: 0 30px 0 0;
+            background: transparent;
+        }
+    }
+
+    .a-back {
+        color: $filterTextColor;
+        transition: 0.3s;
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: $fontSize14;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:hover {
+            color: $linkColor;
+        }
+        &:before {
+            color: $linkColor;
+        }
+    }
+    .filter-box {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        transition: .3s;
+        span.filter-title, h4 {
+            font-size: $fontSize16;
+            color: $filterTextColor;
+            font-weight: 700;
+
+            &.category-title {
+                a {
+                    color: $filterTextColor;
+                    &.active {
+                        color: $linkColor;
+                    }
+                }
+            }
+        }
+        .filter-cats {
+            border-left: 2px solid $filterTextColor;
+            padding-left: 20px;
+            li {
+                a {
+                    font-size: $fontSize14; 
+                    color: $filterTextColor;
+
+                    &:hover {
+                        color: $linkColor;
+                    }
+                    &.active {
+                        font-weight: 600;
+                    }
+                    &:after {
+                        color: $radioButtonColor;
+                    }
+                }
+            }
+        }
+        .filter-brands {
+            input {
+                &[type=radio] + label, &[type=checkbox] + label {
+                    padding: 0px 0 3px 30px;
+                }
+            }
+        }
+        &.search-box {
+            margin-top: 0;
+        }
+        li {
+            padding-bottom: 5px;
+            &:nth-last-child(1) {
+                padding-bottom: 0;
+            }
+            label {
+                &:before {
+                    border-radius: 5px;
+                }
+            }
+        }
+        .price-boxes {
+            width: 45%;
+            margin: 0!important;
+        
+            input {
+              width: 100%;
+              height: 30px;
+              font-size: 14px;
+              background: $white;
+              text-align: center;
+            }
+          }
+    }
+}
+.filter-overlay {
+    content: '';
+    background: $black;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.filter-btn-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    .a-back {
+        color: $bodyTextColor;
+        &:before {
+            color: $bodyTextColor;
+        }
+    }
+    .filter-btn {
+        background: $buttonBackgroundColor;
+        border-color: $buttonBackgroundColor;
+        color: $black;
+        padding: 20px 40px;
+        border-radius: var(--general-border-radius, 5px);
+        &:hover {
+            background: $buttonHoverBackgroundColor;
+            border-color: $buttonHoverBackgroundColor;
+        }
+    }
+}
+
+.priceSlider {
+    float: left;
+    width: 100%;
+    margin: 10px 0 15px!important;
+    
+    #sliderRange {
+      border: 2px solid $white;
+      border-radius: 5px;
+      margin: 5px 0;
+      position: relative;
+      }
+    .ui-slider-range {
+      background-color: $radioButtonColor;
+      position: absolute;
+      height: 4px;
+      top: -2px;
+      }
+    .ui-slider-handle {
+      border: 10px solid $radioButtonColor;
+      border-radius: 10px;
+      height: 0;
+      margin: -10px 0 0 -2px;
+      position: absolute;
+      transition: 0s;
+      
+      &:last-child {
+          margin: -10px 0 0 -18px;
+          }
+      }
+  }
+
+@media screen and (max-width: 991px) {
+    .sidebar-column {
+        position: fixed;
+        top: 0;
+        padding-top: 50px;
+        left: 0;
+        z-index: 15;
+        transition: 0.3s;
+        max-width: 100%;
+        -webkit-transform: translateX(-105%);
+        transform: translateX(-105%);
+        box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+        background: $filterBackgroundColor;
+        height: 100%;
+        width: 310px;
+        border-radius: 0;
+        .sidebar {
+            border-radius: 0;
+            padding-bottom: 50px;
+            overflow: auto;
+            background: $filterBackgroundColor;
+        }
+        h4, h5, label {
+            color: $filterTextColor;
+        }
+    }
+    .sidebar-open {
+        .filter-overlay {
+            opacity: 0.6;
+            pointer-events: inherit;
+        }
+        .sidebar-column {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .sidebar-column {
+        width: 100%;
+    }
+}

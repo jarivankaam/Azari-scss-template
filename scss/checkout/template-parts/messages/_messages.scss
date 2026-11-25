@@ -1,0 +1,124 @@
+@use "../../../abstracts" as *;
+
+.floating-messages {
+  position: fixed;
+  padding: 0 20px 10px;
+  z-index: 30;
+  max-width: 420px;
+
+  .message {
+    border-radius: 5px;
+    overflow: hidden;
+    background: $white;
+    padding: 15px 30px 20px 50px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    pointer-events: none;
+    opacity: 0;
+    border-top: 5px solid $gray;
+    color: $black;
+
+    &.icon.icon-before:before {
+      position: absolute;
+      left: 20px;
+      top: 23px;
+      bottom: inherit;
+      font-size: 20px;
+    }
+
+    &.icon-info {
+      border-color: $blue;
+
+      &:before {
+        color: $blue;
+      }
+    }
+    &.icon-succes {
+      border-color: $green;
+
+      &:before {
+        color: $green;
+      }
+    }
+    &.icon-error {
+      border-color: $red;
+
+      &:before {
+        color: $red;
+      }
+    }
+    a {
+      padding: 8px 10px;
+      color: #000;
+    }
+
+    &.show-it {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      pointer-events: inherit;
+      opacity: 1;
+    }
+  }
+}
+.payment-errors {
+  display: block;
+  margin-top: 15px;
+  font-weight: 300;
+  color: red;
+}
+
+input.error-field,
+select.error-field {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: #ff0000;
+  padding-right: 50px;
+}
+
+input.valid-field,
+select.valid-field {
+  border-color: #05c433;
+  position: relative;
+  padding-right: 50px;
+}
+
+.error-msg-address,
+.error-msg-address-2,
+.payment-errors {
+  background: $red2;
+  padding: 10px;
+  border: 1px solid $red2;
+  border-radius: 5px;
+
+  strong {
+    color: $red;
+  }
+
+  span {
+    color: $red;
+  }
+
+  a {
+    color: $red;
+    font-weight: strong;
+  }
+}
+span.required {
+  color: $red;
+  margin-left: 3px;
+  font-weight: 500;
+}
+
+.error-msg {
+  background: $red2;
+  margin-top: 0;
+  padding: 18px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  .error-text {
+    color: #ff0000;
+    margin: 0;
+  }
+}

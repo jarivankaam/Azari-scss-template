@@ -1,0 +1,71 @@
+@use "../../abstracts" as *;
+
+.section-payment {
+    .payment-wrapper {
+        background-color: $contentCardBackgroundColor;
+        padding: 50px;
+
+        .gui-messages,
+        .gui-page-title,
+        .gui-hide {
+            display: none !important;
+        }
+
+        .gui-block-title strong {
+            font-size: $fontSize21;
+            color: $bodyTextColor;
+            padding: 0 0 10px;
+            margin: 0 0 15px;
+            border-bottom: 1px solid #efefef;
+            display: block;
+        }
+
+        .gui-block {
+            margin-bottom: 30px;
+        }
+
+        .gui-block-subtitle {
+            font-size: $fontSize16;
+            font-weight: 700;
+            margin: 0 0 5px;
+            color: $bodyTextColor;
+        }
+
+        .gui-block-content {
+            padding: 30px 0 0;
+        }
+
+        .gui-checkout-payment-provider {
+            .gui-payment-method {
+                border: 1px solid #efefef;
+                border-radius: var(--general-border-radius, 5px);
+                background: #fff;
+                transition: 0.3s;
+                padding: 10px 15px;
+                margin: 0 0 7px;
+
+                label {
+                    border: none !important;
+                }
+            }
+
+            .gui-right {
+                float: right;
+                font-size: 16px;
+                color: $linkColor;
+                width: auto;
+            }
+
+            .gui-payment-method {
+                &.selected {
+                    opacity: 0.3;
+                }
+
+                &.active {
+                    border: 2px solid #ff6600;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

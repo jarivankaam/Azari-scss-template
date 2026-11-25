@@ -1,0 +1,37 @@
+@use "../../abstracts" as *;
+
+.section-write-review {
+    .write-review-wrapper {
+        background-color: $contentCardBackgroundColor;
+        padding: 50px;
+
+        .gui-required,
+        .gui-hide {
+            display: none !important;
+        }
+
+        .gui-block {
+            margin-bottom: 30px;
+        }
+
+        .gui-block-title strong {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 5px;
+            color: $bodyTextColor;
+            display: block;
+        }
+
+        .gui-field {
+            margin-bottom: 10px;
+        }
+
+        .gui-buttons .gui-right {
+            min-width: 40%;
+
+            a {
+                width: 100%;
+            }
+        }
+    }
+}

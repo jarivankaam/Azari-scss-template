@@ -1,0 +1,230 @@
+@use "../../abstracts" as *;
+
+.maxtext {
+    max-width: 750px;
+    color: $bodyTextColor;
+  
+    p{
+      margin: 0 0 30px;
+      line-height: 1.7;
+  
+      &.m-bot-0 {
+        margin-bottom: 0;
+      }
+      &.m-bot-5 {
+        margin-bottom: 5px;
+      }
+  
+      &>a.cta{
+        margin-top: 10px;
+      }
+  
+      & + h2,
+      & + h3 {
+        margin-top: 30px;
+        display: inline-block;
+      }
+    }
+  
+    & > * {
+      &:last-child{
+        margin-bottom: 0!important;
+      }
+    }
+  
+    strong {
+      color: $bodyTitleColor;
+    }
+  
+    img,
+    iframe:not(.instagram-media),
+    figure{
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin: 20px 0 0;
+      display: inline-block;
+    }
+    iframe.instagram-media {
+      margin: 0 0 30px;
+    }
+  
+    ol {
+      margin: 0 0 30px;
+      padding: 0 0 0 17px;
+  
+      li{
+        line-height: 1.5;
+        margin-bottom: 5px;
+      }
+      & + * {
+        margin-top: 30px!important;
+      }
+    }
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  
+      li{
+        position: relative;
+        padding-left: 17px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+  
+        &:before{
+          content: '';
+          top: 9px;
+          width: 6px;
+          height: 6px;
+          border-radius: 100%;
+          background: $buttonBackgroundColor;
+          position: absolute;
+          left: 0;
+        }
+      }
+  
+      & + * {
+        margin-top: 30px!important;
+      }
+    }
+  
+    &.ul-check-icons {
+      ul {
+        li {
+          padding-left: 30px;
+          margin-bottom: 10px;
+  
+          &:before {
+            content: '\2713';
+            top: -4px;
+            font-family: $fontawesome;
+            font-size: 22px;
+            color: #2bd500;
+            background: transparent;
+            width: auto;
+            height: auto;
+          }
+        }
+      }
+    }
+    p {
+      display: block;
+      line-height: 1.5;
+    }
+    table {
+      border-collapse:collapse;
+      margin-bottom: 30px;
+      max-width: 100%;
+      width: 100%;
+  
+      th {
+        text-align: left;
+        color: $breadcrumbTextColor;
+        font-weight: 600;
+        padding: 10px;
+        min-width: 200px;
+        vertical-align: baseline;
+        border-radius: 5px 0 0 5px;
+      }
+      td {
+        padding: 10px;
+        vertical-align: baseline;
+        border-radius: 0 5px 5px 0;
+        color: $breadcrumbTextColor;
+  
+        &:not(:first-child) {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  h1{
+    color: $bodyTitleColor;
+    font-size: 28.43px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0 0 5px;
+    display: block;
+  }
+  h2{
+    color: $bodyTitleColor;
+    font-size: 28.43px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0 0 5px;
+    display: block;
+  
+    &.title {
+      margin: 0;
+  
+      & + h3,
+      & + p {
+        color: $buttonBackgroundColor;
+        font-family: $titleFont;
+        font-size: 28.43px;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+  }
+  h3{
+    color: $bodyTitleColor;
+    font-size: 28.43px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0 0 7px;
+    display: block;
+  }
+  h4{
+    color: $bodyTitleColor;
+    font-size: 21.32px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 0 0 10px;
+    display: block;
+  }
+  h5{
+    color: $bodyTitleColor;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    margin: 0 0 5px;
+    display: block;
+  }
+  h6{
+    color: $bodyTitleColor;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    margin: 0 0 5px;
+    display: block;
+  }
+  h1,h2,h3,h4,h5,h6,span,label,strong,legend {
+    color: $bodyTextColor;
+  }
+  em {
+    color: $breadcrumbTextColor;
+    font-style: normal;
+  }
+  textarea {
+    max-width: 100%;
+    max-height: 200px;
+    height: 120px;
+    font: inherit;
+    padding: 10px 15px;
+  }
+
+  h1 {
+    font-size: 21.32px;
+  }
+  .hidden {
+    display: none;
+  }
+  .left-content h3, .right-content h3{
+    font-weight: bold;
+  }
+
+  .total-full p{
+    font-weight: bold;
+  }

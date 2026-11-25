@@ -1,0 +1,74 @@
+@use "../../abstracts" as *;
+
+.section-heading {
+    .show-all {
+        a {
+            color: $bodyTextColor;
+            border-bottom: 1px solid $linkColor;
+            &:hover {
+                color: $linkHoverColor;
+            }
+        }
+    }
+}
+
+/* wsa cookie */
+.wsa-cookielaw {
+    top: initial !important;
+    bottom: 0;
+    border-top: 1px solid #fff;
+    background: #fff !important;
+    padding: 10px !important;
+    width: 100% !important;
+    height: auto !important;
+    white-space: inherit !important;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+}
+/* end wsa cookie */
+
+.price,
+.vat,
+.old-price,
+.main-price,
+.additional-price,
+.old-span,
+.total-costs-price,
+.discount-price,
+.shipping-price {
+    &.excl {
+        display: none !important;
+    }
+}
+
+.vat {
+    .price,
+    .old-price,
+    .main-price,
+    .additional-price,
+    .shipping-price {
+        &.excl {
+            display: inline !important;
+            &.flex {
+                display: flex !important;
+            }
+        }
+        &.incl {
+            display: none !important;
+        }
+    }
+    .old-span,
+    .vat,
+    .total-costs-price,
+    .discount-price {
+        &.excl {
+            display: block !important;
+        }
+        &.incl {
+            display: none !important;
+        }
+    }
+}
+
+.thankyou-wrapper a[onclick="window.print();"] {
+    display: none;
+}

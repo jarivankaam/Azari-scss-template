@@ -1,0 +1,60 @@
+// Main stylesheet — order matters
+
+// Fonts (plain CSS @import for Google Fonts is hoisted to the top)
+@use "base/fonts";
+
+// Vendors
+@use "vendors/bootstrap";
+@use "vendors/swiper";
+
+// Base
+@use "base/grid-extras";
+@use "base/tables";
+@use "base/base";
+@use "base/text";
+@use "base/buttons";
+@use "base/form";
+@use "base/icons";
+
+// Global
+@use "template-parts/global/global";
+@use "template-parts/global/header";
+@use "template-parts/global/footer";
+
+// Template parts
+@use "template-parts/account/section_dashboard";
+@use "template-parts/account/section_login";
+@use "template-parts/account/section_register";
+@use "template-parts/action-banner/part_action_banner";
+@use "template-parts/blog/part_blog";
+@use "template-parts/blog/single_blog";
+@use "template-parts/brands/part_brand";
+@use "template-parts/breadcrumbs/section_breadcrumbs";
+@use "template-parts/bundles/section-product-bundles";
+@use "template-parts/cart/page_cart";
+@use "template-parts/catalog/part_catalog_category";
+@use "template-parts/collection/part_collection";
+@use "template-parts/collection/part_filter";
+@use "template-parts/compare/section_compare";
+@use "template-parts/cta/section_cta";
+@use "template-parts/giftcard/section_giftcard";
+@use "template-parts/headlines/section_headlines";
+@use "template-parts/hero/section_hero";
+@use "template-parts/hero/section_hero_small";
+@use "template-parts/messages/part_messages";
+@use "template-parts/order/section_payment";
+@use "template-parts/order/section_thankyou";
+@use "template-parts/popup/part_popup";
+@use "template-parts/product/part_product_card";
+@use "template-parts/product/section_product_detail";
+@use "template-parts/reviews/part_review_card";
+@use "template-parts/reviews/section_reviews";
+@use "template-parts/reviews/section_write_review";
+@use "template-parts/service/section_faq";
+@use "template-parts/sitemap/page-sitemap";
+@use "template-parts/swiper/pagination";
+@use "template-parts/text-media/section_text_media";
+@use "template-parts/usps/section_usps";
+
+// Responsive overrides last
+@use "base/media_queries";

@@ -1,0 +1,101 @@
+@use "../../abstracts" as *;
+
+.section-compare {
+    h1 {
+        font-size: $fontSize37;
+    }
+    table {
+        width: 100%;
+        background: $white;
+        border-radius: var(--general-border-radius, 5px);
+        border-collapse: collapse;
+        position: relative;
+        th {
+            color: #000;
+            font-size: 21.32px;
+            padding: 12px 40px 10px;
+            border-bottom: 1px solid #efefef;
+        }
+        td {
+            &:not(:first-child) {
+                border-left: 1px solid #efefef;
+            }
+            &:first-child {
+                font-weight: 700;
+                color: #000;
+            }
+        }
+        tbody {
+            tr:nth-child(even) td {
+                background: #f7f7f7;
+            }
+            td {
+                padding: 10px 20px;
+                vertical-align: baseline;
+            }
+        }
+        img {
+            margin: 0 auto;
+        }
+        a {
+            color: $linkColor;
+            &:hover {
+                color: $linkHoverColor;
+            }
+            &.gui-button-small {
+                color: $buttonTextColor;
+                background-color: $buttonBackgroundColor;
+                &:hover {
+                    color: $buttonHoverTextColor;
+                    background-color: $buttonHoverBackgroundColor;
+                }
+            }
+        }
+        
+        strong {
+            color: $bodyTextColor;
+        }
+    }
+    .gui-page-title {
+        display: none;
+    }
+    .gui-compare-row-brand br,
+    .gui-compare-row-brand img,
+    .gui-compare-row-button br,
+    .gui-compare-link-add-to-wishlist {
+        display: none;
+    } 
+    .gui-compare-row-button td {
+        text-align: right
+    }
+    .gui-compare-link-delete {
+        position: absolute;
+        top: 6px;
+        color: $bodyTextColor;
+        padding: 10px;
+        margin: 0 0 0 -20px;
+    }
+    .gui-table {
+        max-width: 100%;
+        overflow: auto;
+    }
+    .icon-star.rated:before {
+        color: $buttonBackgroundColor;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .section-compare {
+        .gui-compare-row-button {
+            .gui-button-small {
+                width: 100%;
+            }
+            td { 
+                min-width: 220px;
+                &:first-child {
+                    min-width: 150px;
+                }
+            }
+        } 
+    }
+}

@@ -1,0 +1,57 @@
+@use "../abstracts" as *;
+
+a.inline-cta,
+input[type="submit"],
+button,
+.gui-button-small,
+.cta {
+    width: auto;
+    max-width: 100%;
+    line-height: 20px;
+    padding: 14px 30px;
+    color: $buttonTextColor;
+    border: 1px solid $buttonBackgroundColor;
+    background: $buttonBackgroundColor;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: $mainFont;
+    font-weight: 500;
+    border-radius: var(--general-border-radius, 5px);
+
+    &:hover {
+        color: $buttonHoverTextColor;
+        background: $buttonHoverBackgroundColor;
+        border: 1px solid $buttonHoverBackgroundColor;
+    }
+
+    &.cta-small {
+        padding: 6.5px 30px;
+    }
+
+    &.cta-secondary {
+        color: $buttonSecondaryTextColor;
+        background: transparent;
+        border-color: $buttonSecondaryBorderColor;
+
+        &:hover {
+            color: $buttonSecondaryHoverTextColor;
+            background: transparent;
+            border-color: $buttonSecondaryBorderHoverColor;
+        }
+    }
+    &.cta-secondary-colored {
+        color: $bodyTextColor;
+        background: $buttonSecondaryBackgroundColor;
+        border-color: $buttonSecondaryBackgroundColor;
+
+        &:hover {
+            color: $bodyTextColor;
+            background: $buttonSecondaryHoverBackgroundColor;
+            border-color: $buttonSecondaryHoverBackgroundColor;
+        }
+    }
+}

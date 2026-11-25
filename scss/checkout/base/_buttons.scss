@@ -1,0 +1,146 @@
+@use "../../abstracts" as *;
+
+a.inline-cta,
+input[type="submit"],
+button,
+.gui-button-large,
+.gui-button-small,
+.cta {
+  width: auto;
+  max-width: 100%;
+  line-height: 20px;
+  padding: 15px 21px 14px;
+  color: $white;
+  border: 1px solid $buttonBackgroundColor;
+  border-radius: 5px;
+  background: $buttonBackgroundColor;
+  transition: $transition;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  font: inherit;
+  font-size: 16px;
+  
+  &.cta-outline {
+  	background: transparent;
+    color: $buttonBackgroundColor;
+  }
+  
+  &.cta-discount {
+  	background: $buttonBackgroundColor;
+    border-color: $buttonBackgroundColor;
+    
+    &:hover {
+    	background: $buttonHoverBackgroundColor;
+      border-color: $buttonHoverBackgroundColor
+    }
+  }
+  
+  &.cta-flex {
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    
+    &:before {
+    	bottom: 0 !important;
+    }
+    
+    &:after {
+    	bottom: 0 !important;
+    }
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &:hover{
+    color: $white;
+    background: $buttonHoverBackgroundColor;
+    border: 1px solid $buttonHoverBackgroundColor;
+  }
+  &.bordered {
+    color: $bodyTitleColor;
+    background: transparent;
+    border-color: $buttonTextColor;
+
+    &:before,
+    &:after {
+      color: $buttonTextColor;
+    }
+    &.swiper-button:before,
+    &.swiper-button:after {
+      color: $bodyTextColor;
+    }
+    &:hover {
+      color: $buttonHoverTextColor;
+      background: $buttonHoverBackgroundColor;
+      border-color: $buttonHoverBackgroundColor;
+
+      &:before,
+      &:after {
+        color: $buttonHoverTextColor;
+      }
+    }
+    &.swiper-button-disabled {
+      opacity: 0.2;
+    }
+  }
+  
+  &.cta-secondary {
+    color: $buttonSecondaryTextColor;
+    background: transparent;
+    border-color: $buttonSecondaryBorderColor;
+
+    &:hover {
+        color: $buttonSecondaryHoverTextColor;
+        background: transparent;
+        border-color: $buttonSecondaryBorderHoverColor;
+    }
+  }
+  &.cta-secondary-colored {
+      color: $bodyTextColor;
+      background: $buttonSecondaryBackgroundColor;
+      border-color: $buttonSecondaryBackgroundColor;
+
+      &:hover {
+          color: $bodyTextColor;
+          background: $buttonSecondaryHoverBackgroundColor;
+          border-color: $buttonSecondaryHoverBackgroundColor;
+      }
+  }
+}
+.cta {
+  &.white {
+    background: $white;
+    border-color: $buttonBackgroundColor;
+    color: $bodyTitleColor;
+
+    &:after {
+      color: $buttonBackgroundColor;
+    }
+
+    &:hover {
+      background: $buttonBackgroundColor;
+      border-color: $buttonBackgroundColor;
+      color: $white;
+    }
+  }
+  &.smaller {
+    padding: 12px 20px 10px;
+    font-size: 16px;
+    min-width: 150px;
+    height: 40px;
+    line-height: 1;
+
+    &:before {
+      font-size: 16px;
+    }
+  }
+}
+a.inline-cta, input[type="submit"], button, .gui-button-large, .gui-button-small, .cta {
+	span {
+  	color: $white;
+  }
+}

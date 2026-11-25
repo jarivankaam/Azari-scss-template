@@ -1,0 +1,48 @@
+@use "../../abstracts" as *;
+
+.section-text-media {
+    .image-wrapper {
+        height: 100%;
+        border-radius: var(--general-border-radius, 5px);
+        overflow: hidden;
+
+        &.outside {
+            position: relative;
+            width: 50vw;     
+            &.outside-left {
+                margin-left: -50vw;
+                left: 100%;
+            }
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content-wrapper {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &.no-maxtext {
+            max-width: none;
+            width: 100%;
+
+            * {
+                max-width: 750px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-text-media {
+        .content-wrapper {
+            h2 {
+                font-size: $fontSize21;
+            }
+        }
+    }
+}

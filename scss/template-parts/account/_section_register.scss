@@ -1,0 +1,123 @@
+@use "../../abstracts" as *;
+
+.section-register {
+    .register-wrapper {
+        background-color: $contentCardBackgroundColor;
+        padding: 50px;
+        border-radius: var(--general-border-radius, 10px);
+    }
+
+    .gui-page-title {
+        display: none !important;
+
+        + p {
+            display: none !important;
+        }
+    }
+
+    .gui-hide,
+    .gui-spacer,
+    .gui-address-line2,
+    .gui-required,
+    .gui-buttons .gui-left {
+        display: none !important;
+    }
+
+    .gui-block {
+        margin-bottom: 50px;
+    }
+
+    .gui-block-title strong {
+        font-size: $fontSize21;
+        color: $bodyTextColor;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #efefef;
+        display: block;
+    }
+
+    .gui-input-phone-number {
+        .gui-input-phone-number-code-wrapper {
+            margin: 13px 10px;
+        }
+
+        #gui-form-details-phone-number {
+            padding-left: 95px;
+        }
+    }
+
+    .gui-field {
+        &.gui-form-region .gui-input {
+            display: none;
+        }
+
+        margin-bottom: 10px;
+    }
+
+    .full-width-im {
+        width: 100% !important;
+        -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .gui-buttons a {
+        width: 300px;
+        max-width: 100%;
+        line-height: 20px;
+        padding: 14px 30px;
+        color: $buttonTextColor;
+        border: 1px solid $buttonBackgroundColor;
+        border-radius: var(--general-border-radius, 10px);
+        background: $buttonBackgroundColor;
+        transition: 0.3s;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        font-size: $fontSize16;
+        font-family: $mainFont;
+        font-weight: 500;
+
+        &:hover {
+            color: $buttonHoverTextColor;
+            background: $buttonHoverBackgroundColor;
+            border: 1px solid $buttonHoverBackgroundColor;
+        }
+    }
+
+    #account-toc {
+        position: fixed;
+        background: $white;
+        max-height: calc(100vh - 400px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 25px;
+        border-radius: 10px;
+        overflow-y: scroll;
+        display: none;
+        z-index: 20;
+
+        .gui-popover-title {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                color: $buttonTextColor;
+                background: $buttonBackgroundColor;
+                width: 25px;
+                height: 25px;
+                font-size: 14px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                border-radius: 50%;
+                &:hover {
+                    color: $buttonHoverTextColor;
+                    background: $buttonHoverBackgroundColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+// Checkout stylesheet — order matters (mirrors the original checkout.scss)
+
+/* Base styling */
+@use "base/fonts";
+@use "vendors/bootstrap";
+@use "base/grid-extras";
+@use "base/tables";
+
+/* Base checkout styling */
+@use "checkout/base/buttons";
+@use "checkout/base/mediaqueries";
+@use "checkout/base/font";
+@use "checkout/base/icons";
+@use "checkout/base/text";
+
+/* Global styling */
+@use "checkout/global/global_header";
+
+/* Display styling */
+@use "checkout/template-parts/cookies/cookies";
+@use "checkout/template-parts/display/display";
+
+/* Form styling */
+@use "checkout/template-parts/dropdown/section_dropdown";
+@use "checkout/template-parts/forms/forms";
+
+/* General layout styling */
+@use "checkout/template-parts/general/general";
+@use "checkout/template-parts/layout/container";
+@use "checkout/template-parts/layout/discount";
+@use "checkout/template-parts/layout/product";
+@use "checkout/template-parts/layout/section_left";
+@use "checkout/template-parts/layout/section_right";
+
+/* Component styling */
+@use "checkout/template-parts/messages/messages";
+@use "checkout/template-parts/mollie/component_mollie";
+@use "checkout/template-parts/shipping/shipping";
+@use "checkout/template-parts/steps/section_steps";

@@ -1,0 +1,39 @@
+@use "../../../abstracts" as *;
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: $mainFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $bodyTextColor;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: $bodyBackgroundColor;
+  margin-top: 0 !important;
+}
+
+*:before,
+*:after {
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}
+.gui-input-phone-number-code-wrapper {
+  z-index: 10;
+}
+.payment-card-form .payment-errors {
+  display: none;
+}

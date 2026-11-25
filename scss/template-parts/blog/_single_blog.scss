@@ -1,0 +1,24 @@
+@use "../../abstracts" as *;
+
+.section-single-blog {
+    .hero-blog-wrapper {
+        img {
+            max-height: 500px;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    .subscribe-wrapper {
+        background-color: $gray;
+        padding-right: 25px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        padding-left: 25px;
+
+        h3 {
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+    }
+}
