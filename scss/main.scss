@@ -1,6 +1,6 @@
 // Main stylesheet — order matters
 
-// Fonts (plain CSS @import for Google Fonts is hoisted to the top)
+// Fonts (self-hosted @font-face rules)
 @use "base/fonts";
 
 // Vendors

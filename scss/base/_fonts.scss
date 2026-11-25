@@ -1,106 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+// Self-hosted fonts. Loaded once per entry point (main.scss / checkout.scss).
+//
+// Font files live in /fonts (copied from node_modules by `npm run fonts`).
+// $fontPath is relative to dist/css/, so the URLs resolve both locally and on
+// jsDelivr (…/Azari-scss-template@<tag>/dist/css/ → …@<tag>/fonts/).
+@use "sass:map";
+@use "../abstracts" as *;
+
+// ---------------------------------------------------------------------------
+// Poppins (400–800, latin + latin-ext). Same weights and font-display as the
+// former Google Fonts import.
+// ---------------------------------------------------------------------------
+$poppins-subsets: (
+    "latin-ext": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF",
+    "latin": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
+);
+
+@each $weight in (400, 500, 600, 700, 800) {
+    @each $subset, $range in $poppins-subsets {
+        @font-face {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: $weight;
+            font-display: swap;
+            src: url("#{$fontPath}/poppins/poppins-#{$subset}-#{$weight}-normal.woff2") format("woff2");
+            unicode-range: unquote($range);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Font Awesome 6 Free, mapped onto the family names the styles already use.
+//
+// Free has no Light/Thin/Duotone, so:
+//   "Font Awesome 6 Pro"  100–400 → Regular, 500–900 → Solid
+//   "Font Awesome 6 Duotone"      → Solid
+//   "Azari Icons Solid"           → Solid; second entry in $fontawesome so
+//                                   icons missing from Free Regular fall back
+//                                   to Solid instead of rendering blank.
+// ---------------------------------------------------------------------------
+$fa-path: "#{$fontPath}/fontawesome";
 
 @font-face {
     font-family: "Font Awesome 6 Brands";
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url("../../assets/fonts/global/fa-brands-400.woff2") format("woff2"),
-        url("../../assets/fonts/global/fa-brands-400.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Font Awesome 6 Duotone";
-    font-style: normal;
-    font-weight: 900;
-    font-display: block;
-    src: url("../../assets/fonts/global/fa-duotone-900.woff2") format("woff2"),
-        url("../../assets/fonts/global/fa-duotone-900.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Font Awesome 6 Pro";
-    font-style: normal;
-    font-weight: 300;
-    font-display: block;
-    src: url("../../assets/fonts/global/fa-light-300.woff2") format("woff2"),
-        url("../../assets/fonts/global/fa-light-300.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Font Awesome 6 Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url("../../assets/fonts/global/fa-regular-400.woff2") format("woff2"),
-        url("../../assets/fonts/global/fa-regular-400.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Font Awesome 6 Pro";
-    font-style: normal;
-    font-weight: 900;
-    font-display: block;
-    src: url("../../assets/fonts/global/fa-solid-900.woff2") format("woff2"),
-        url("../../assets/fonts/global/fa-solid-900.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Font Awesome 6 Pro";
-    font-style: normal;
-    font-weight: 100;
-    font-display: block;
-    src: url("../../assets/fonts/global/fa-thin-100.woff2") format("woff2"),
-        url("../../assets/fonts/global/fa-thin-100.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Font Awesome 6 Pro";
-    font-style: normal;
-    font-weight: 300;
-    font-display: block;
-    src: url("https://redbanana.nl/fonts/fa-light-300.woff2") format("woff2"),
-        url("https://redbanana.nl/fonts/fa-light-300.woff") format("woff"),
-        url("https://redbanana.nl/fonts/fa-light-300.ttf") format("truetype");
+    src: url("#{$fa-path}/fa-brands-400.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Font Awesome 6 Pro";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100 400;
     font-display: block;
-    src: url("https://redbanana.nl/fonts/fa-regular-400.woff2") format("woff2"),
-        url("https://redbanana.nl/fonts/fa-regular-400.woff") format("woff"),
-        url("https://redbanana.nl/fonts/fa-regular-400.ttf") format("truetype");
+    src: url("#{$fa-path}/fa-regular-400.woff2") format("woff2");
 }
+
 @font-face {
     font-family: "Font Awesome 6 Pro";
     font-style: normal;
-    font-weight: 900;
+    font-weight: 500 900;
     font-display: block;
-    src: url("https://redbanana.nl/fonts/fa-solid-900.woff2") format("woff2"),
-        url("https://redbanana.nl/fonts/fa-solid-900.woff") format("woff"),
-        url("https://redbanana.nl/fonts/fa-solid-900.ttf") format("truetype");
+    src: url("#{$fa-path}/fa-solid-900.woff2") format("woff2");
 }
-@font-face {
-    font-family: "Font Awesome 6 Pro";
-    font-style: normal;
-    font-weight: 100;
-    font-display: block;
-    src: url("https://redbanana.nl/fonts/fa-thin-100.woff2") format("woff2"),
-        url("https://redbanana.nl/fonts/fa-thin-100.woff") format("woff"),
-        url("https://redbanana.nl/fonts/fa-thin-100.ttf") format("truetype");
-}
-@font-face {
-    font-family: "Font Awesome 6 Brands";
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url("https://redbanana.nl/fonts/fa-brands-400.woff2") format("woff2"),
-        url("https://redbanana.nl/fonts/fa-brands-400.woff") format("woff"),
-        url("https://redbanana.nl/fonts/fa-brands-400.ttf") format("truetype");
-}
+
 @font-face {
     font-family: "Font Awesome 6 Duotone";
     font-style: normal;
-    font-weight: 900;
+    font-weight: 100 900;
     font-display: block;
-    src: url("https://redbanana.nl/fonts/fa-duotone-900.woff2") format("woff2"),
-        url("https://redbanana.nl/fonts/fa-duotone-900.woff") format("woff"),
-        url("https://redbanana.nl/fonts/fa-duotone-900.ttf") format("truetype");
+    src: url("#{$fa-path}/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Azari Icons Solid";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: block;
+    src: url("#{$fa-path}/fa-solid-900.woff2") format("woff2");
 }

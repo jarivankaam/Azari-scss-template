@@ -1,7 +1,10 @@
 /* Fonts var */
-$fontawesome: "Font Awesome 6 Pro";
+$fontawesome: "Font Awesome 6 Pro", "Azari Icons Solid"; // see base/_fonts.scss
 $fontawesomeBrands: "Font Awesome 6 Brands";
 $fontawesomeDuotone: "Font Awesome 6 Duotone";
+
+/* Font files, relative to dist/css/ */
+$fontPath: "../../fonts" !default;
 $mainFont: "Poppins", sans-serif;
 $titleFont: "Poppins", sans-serif;
 $transition: 0.3s;
@@ -21,7 +24,8 @@ $red: #f35731;
 $red2: #ffe8e8;
 $blue: #0c1315;
 
-$backgroundImage: url("https://cdn.webshopapp.com/shops/342728/files/412230217/pattern-overlay.png");
+// Pattern overlay image: override per project. Not used by the shared styles.
+$backgroundImage: none !default;
 
 /* Font sizes */
 $fontSize89: 5.61em;
