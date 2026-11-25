@@ -4,11 +4,17 @@
   "private": true,
   "description": "Custom SCSS setup with the Bootstrap 5 grid (Dart Sass, @use modules)",
   "scripts": {
-    "build": "sass --load-path=node_modules --quiet-deps --silence-deprecation=import --style=compressed --no-source-map scss/main.scss:dist/css/main.css scss/checkout.scss:dist/css/checkout.css",
+    "build": "npm run build:min && npm run build:expanded && npm run check",
+    "build:min": "sass --load-path=node_modules --quiet-deps --silence-deprecation=import --style=compressed --no-source-map scss/main.scss:dist/css/main.css scss/checkout.scss:dist/css/checkout.css",
+    "build:expanded": "sass --load-path=node_modules --quiet-deps --silence-deprecation=import --style=expanded --no-source-map scss/main.scss:dist/css/main.expanded.css scss/checkout.scss:dist/css/checkout.expanded.css",
+    "check": "node scripts/check-dist.mjs",
+    "fonts": "node scripts/copy-fonts.mjs",
     "watch": "sass --load-path=node_modules --quiet-deps --silence-deprecation=import --watch --embed-sources scss/main.scss:dist/css/main.css scss/checkout.scss:dist/css/checkout.css",
     "dev": "npm run watch"
   },
   "devDependencies": {
+    "@fontsource/poppins": "^5.3.0",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "bootstrap": "^5.3.9",
     "sass": "^1.108.2"
   }

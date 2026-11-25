@@ -1,151 +1,30 @@
-@font-face {
-  font-family: 'Font Awesome 6 Pro';
-  font-style: normal;
-  font-weight: 300;
-  font-display: block;
-  src: url("https://redbanana.nl/fonts/fa-light-300.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-light-300.woff") format("woff"), url("https://redbanana.nl/fonts/fa-light-300.ttf") format("truetype"); }
+// Font Awesome style classes. The @font-face rules are in base/_fonts.scss.
+@use "../../abstracts" as *;
 
 .fal,
 .fa-light {
-  font-family: 'Font Awesome 6 Pro';
+  font-family: $fontawesome;
   font-weight: 300; }
-@font-face {
-  font-family: 'Font Awesome 6 Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("https://redbanana.nl/fonts/fa-regular-400.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-regular-400.woff") format("woff"), url("https://redbanana.nl/fonts/fa-regular-400.ttf") format("truetype"); }
-
 .far,
 .fa-regular {
-  font-family: 'Font Awesome 6 Pro';
+  font-family: $fontawesome;
   font-weight: 400; }
-@font-face {
-  font-family: 'Font Awesome 6 Pro';
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url("https://redbanana.nl/fonts/fa-solid-900.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-solid-900.woff") format("woff"), url("https://redbanana.nl/fonts/fa-solid-900.ttf") format("truetype"); }
-
 .fas,
 .fa-solid {
-  font-family: 'Font Awesome 6 Pro';
+  font-family: $fontawesome;
   font-weight: 900; }
-@font-face {
-  font-family: 'Font Awesome 6 Pro';
-  font-style: normal;
-  font-weight: 100;
-  font-display: block;
-  src: url("https://redbanana.nl/fonts/fa-thin-100.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-thin-100.woff") format("woff"), url("https://redbanana.nl/fonts/fa-thin-100.ttf") format("truetype"); }
-
 .fat,
 .fa-thin {
-  font-family: 'Font Awesome 6 Pro';
+  font-family: $fontawesome;
   font-weight: 100; }
   
-@font-face {
-  font-family: 'Font Awesome 6 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
- 	src: url("https://redbanana.nl/fonts/fa-brands-400.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-brands-400.woff") format("woff"), url("https://redbanana.nl/fonts/fa-brands-400.ttf") format("truetype"); }
-
 .fab,
 .fa-brands {
-  font-family: 'Font Awesome 6 Brands';
+  font-family: $fontawesomeBrands;
   font-weight: 400; }
-
-@font-face {
-  font-family: 'Font Awesome 6 Duotone';
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url("https://redbanana.nl/fonts/fa-duotone-900.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-duotone-900.woff") format("woff"), url("https://redbanana.nl/fonts/fa-duotone-900.ttf") format("truetype"); }
 
 .fad,
 .fa-duotone {
   position: relative;
-  font-family: 'Font Awesome 6 Duotone';
+  font-family: $fontawesomeDuotone;
   font-weight: 900; }
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
-
-  @font-face {
-      font-family: "Font Awesome 6 Brands";
-      font-style: normal;
-      font-weight: 400;
-      font-display: block;
-      src: url("../../assets/fonts/global/fa-brands-400.woff2") format("woff2"), url("../../assets/fonts/global/fa-brands-400.ttf") format("truetype");
-  }
-  
-  @font-face {
-      font-family: "Font Awesome 6 Duotone";
-      font-style: normal;
-      font-weight: 900;
-      font-display: block;
-      src: url("../../assets/fonts/global/fa-duotone-900.woff2") format("woff2"), url("../../assets/fonts/global/fa-duotone-900.ttf") format("truetype");
-  }
-  @font-face {
-      font-family: "Font Awesome 6 Pro";
-      font-style: normal;
-      font-weight: 300;
-      font-display: block;
-      src: url("../../assets/fonts/global/fa-light-300.woff2") format("woff2"), url("../../assets/fonts/global/fa-light-300.ttf") format("truetype");
-  }
-  @font-face {
-      font-family: "Font Awesome 6 Pro";
-      font-style: normal;
-      font-weight: 400;
-      font-display: block;
-      src: url("../../assets/fonts/global/fa-regular-400.woff2") format("woff2"), url("../../assets/fonts/global/fa-regular-400.ttf") format("truetype");
-  }
-  @font-face {
-      font-family: "Font Awesome 6 Pro";
-      font-style: normal;
-      font-weight: 900;
-      font-display: block;
-      src: url("../../assets/fonts/global/fa-solid-900.woff2") format("woff2"), url("../../assets/fonts/global/fa-solid-900.ttf") format("truetype");
-  }
-  @font-face {
-      font-family: "Font Awesome 6 Pro";
-      font-style: normal;
-      font-weight: 100;
-      font-display: block;
-      src: url("../../assets/fonts/global/fa-thin-100.woff2") format("woff2"), url("../../assets/fonts/global/fa-thin-100.ttf") format("truetype");
-  }
-  @font-face {
-      font-family: 'Font Awesome 6 Pro';
-      font-style: normal;
-      font-weight: 300;
-      font-display: block;
-      src: url("https://redbanana.nl/fonts/fa-light-300.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-light-300.woff") format("woff"), url("https://redbanana.nl/fonts/fa-light-300.ttf") format("truetype"); }
-    
-    @font-face {
-      font-family: 'Font Awesome 6 Pro';
-      font-style: normal;
-      font-weight: 400;
-      font-display: block;
-      src: url("https://redbanana.nl/fonts/fa-regular-400.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-regular-400.woff") format("woff"), url("https://redbanana.nl/fonts/fa-regular-400.ttf") format("truetype"); }
-    @font-face {
-      font-family: 'Font Awesome 6 Pro';
-      font-style: normal;
-      font-weight: 900;
-      font-display: block;
-      src: url("https://redbanana.nl/fonts/fa-solid-900.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-solid-900.woff") format("woff"), url("https://redbanana.nl/fonts/fa-solid-900.ttf") format("truetype"); }
-    @font-face {
-      font-family: 'Font Awesome 6 Pro';
-      font-style: normal;
-      font-weight: 100;
-      font-display: block;
-      src: url("https://redbanana.nl/fonts/fa-thin-100.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-thin-100.woff") format("woff"), url("https://redbanana.nl/fonts/fa-thin-100.ttf") format("truetype"); }
-    @font-face {
-      font-family: 'Font Awesome 6 Brands';
-      font-style: normal;
-      font-weight: 400;
-      font-display: block;
-         src: url("https://redbanana.nl/fonts/fa-brands-400.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-brands-400.woff") format("woff"), url("https://redbanana.nl/fonts/fa-brands-400.ttf") format("truetype"); }
-    @font-face {
-      font-family: 'Font Awesome 6 Duotone';
-      font-style: normal;
-      font-weight: 900;
-      font-display: block;
-      src: url("https://redbanana.nl/fonts/fa-duotone-900.woff2") format("woff2"), url("https://redbanana.nl/fonts/fa-duotone-900.woff") format("woff"), url("https://redbanana.nl/fonts/fa-duotone-900.ttf") format("truetype"); }
